@@ -13,7 +13,7 @@ tauri-build = { version = "1", features = [] }
 [dependencies]
 window-shadows = "0.2.2"
 tauri-plugin-fs-extra = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
-tauri = { version = "1", features = [ "fs-all", "shell-open"] }
+tauri = { version = "1", features = [ "protocol-asset", "dialog-all", "path-all", "fs-all", "shell-open"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 

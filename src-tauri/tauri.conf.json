@@ -16,17 +16,19 @@
         "all": false,
         "open": true
       },
+      "path": {
+        "all": true
+      },
+      "protocol": {
+        "asset": true,
+        "assetScope": ["**"]
+      },
+      "dialog": {
+        "all": true
+      },
       "fs": {
         "all": true,
-        "readFile": true,
-        "writeFile": true,
-        "readDir": true,
-        "copyFile": true,
-        "createDir": true,
-        "removeDir": true,
-        "removeFile": true,
-        "renameFile": true,
-        "exists": true
+        "scope": ["**"]
       }
     },
     "windows": [
@@ -34,7 +36,7 @@
         "title": "pdfaireader",
         "width": 800,
         "height": 600,
-        "fileDropEnabled": false
+        "fileDropEnabled": true
       }
     ],
     "security": {

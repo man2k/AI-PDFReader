@@ -1,36 +1,38 @@
 // type Props = {}
 import { useDropzone } from "react-dropzone";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
+import { writeTextFile, BaseDirectory, writeFile } from "@tauri-apps/api/fs";
 
 import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
+
   const navigate = useNavigate();
 
   const onDrop = useCallback(async (acceptedFiles: Array<Blob>) => {
     console.log(acceptedFiles[0]);
-    // sessionStorage.setItem("pdf", JSON.stringify(acceptedFiles[0]));
-    // console.log(sessionStorage.getItem("pdf"));
-    // const blobURL = URL.createObjectURL(acceptedFiles[0]);
-    // const buf = await acceptedFiles[0].arrayBuffer();
-
-    // window.sessionStorage.setItem("pdfbuffer", JSON.stringify(buf));
-    // console.log(blobURL);
     let reader = new FileReader();
-    reader.onload = function (event) {
-      // The file's text will be printed here
-      var base64 = event.target.result;
-      localStorage.setItem("file", base64);
+
+    reader.onload = function (e) {
+      const base64 = e.target?.result as string;
+      sessionStorage.setItem("file", base64);
+      writeTextFile("pdfData", base64, {
+        dir: BaseDirectory.AppConfig,
+      });
+      navigate("/pdfDisplay");
     };
     reader.readAsDataURL(acceptedFiles[0]);
-    navigate("/pdfDisplay");
   }, []);
 
   const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
     useDropzone({
       onDrop,
-      // accept: {
-      //   "application/pdf": [],
-      // },
+      accept: {
+        "application/pdf": [],
+      },
     });
 
   return (

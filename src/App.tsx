@@ -1,7 +1,4 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import { invoke } from "@tauri-apps/api/tauri";
-import { Routes, Route, Navigate, RouteProps } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import PdfDisplay from "./pages/PdfDisplay";
 const App = () => {

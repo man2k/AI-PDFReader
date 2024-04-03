@@ -31,7 +31,7 @@ jobs:
         with:
           version: 8
       - name: install app dependencies and build it
-        run: pnpm install && pnpm build
+        run: pnpm install --lockfile=false && pnpm build
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

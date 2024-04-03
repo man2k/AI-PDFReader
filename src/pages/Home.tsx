@@ -12,8 +12,17 @@ const Home = () => {
     const unlisten = listen("tauri://file-drop", (event) => {
       //@ts-ignore
       console.log(event);
-      // @ts-ignore
-      sessionStorage.setItem("path", convertFileSrc(event.payload[0]));
+      //@ts-ignore
+      sessionStorage.setItem(
+        "path",
+        JSON.stringify({
+          //@ts-ignore
+          webPath: convertFileSrc(event.payload[0]),
+          //@ts-ignore
+          absPath: event.payload[0],
+        })
+      );
+      // sessionStorage.setItem("absPath", event.payload[0]);
       // console.log(sessionStorage.getItem("path"));
       navigate("/pdfDisplay");
     });
@@ -34,8 +43,16 @@ const Home = () => {
       ],
     });
     console.log(selected);
-    sessionStorage.setItem("path", convertFileSrc(selected as string));
-
+    // sessionStorage.setItem("path", convertFileSrc(selected as string));
+    sessionStorage.setItem(
+      "path",
+      JSON.stringify({
+        //@ts-ignore
+        webPath: convertFileSrc(selected),
+        //@ts-ignore
+        absPath: selected,
+      })
+    );
     navigate("/pdfDisplay");
   };
 

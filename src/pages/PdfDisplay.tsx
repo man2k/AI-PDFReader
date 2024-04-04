@@ -4,8 +4,8 @@ import ReadPdf from "../components/ReadPdf";
 const PdfDisplay = () => {
   const [pdfFilePath, setPdfFilePath] = useState<string>("");
   useEffect(() => {
-    const a = document.getElementById("pdfViewer");
-    console.log(a);
+    // const a = document.getElementById("pdfViewer");
+    // console.log(a);
     const pp = JSON.parse(sessionStorage.getItem("path") as string);
     setPdfFilePath(pp.webPath as string);
   }, []);
@@ -15,7 +15,7 @@ const PdfDisplay = () => {
       <div className="text-white">
         <iframe
           src={pdfFilePath}
-          className="w-screen h-[570px] border-2 border-amber-500"
+          className="w-screen h-[560px] border-2 border-amber-500"
           id="pdfViewer"
         />
       </div>

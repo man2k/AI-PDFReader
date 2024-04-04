@@ -1,0 +1,48 @@
+
+
+Job Title: Trainee  
+
+Function: G & PS-GovTech 
+
+Location: Pan India 
+
+Overview 
+
+KPMG is a global organization of independent professional services firms providing Audit, Tax and 
+Advisory services. We operate in 146 countries and territories and in FY20 had close to 227,000 people 
+working in member firms around the world. 
+
+KPMG in India, a professional services firm, is the Indian member firm of KPMG International 
+Cooperative (“KPMG International.”), was established in August 1993. As members of a cohesive 
+business unit, they respond to a client service environment by leveraging the resources of a global 
+network of firms, providing detailed knowledge of local laws, regulations, markets, and competition. 
+
+KPMG’s Advisory Services Practice focuses on fundamental business issues —improving business 
+performance, managing risk, increasing revenues, controlling costs, and driving innovation —that 
+organizations, across various industries, should address to help them flourish. We help companies work 
+across their lifecycle to realize their ambition and leverage leading insights from KPMG practitioners 
+globally. 
+
+ 
+
+Role and Responsibility 
+
+•  Candidates will be aligned with mentors who would give assignments, they must deliver as per 
+timelines set by mentors 
+•  Assignments will be purely technical 
+•  Excellent knowledge in any programming language is a must. Preferably python, Java, c++ 
+•  Must have decent knowledge about database 
+•  Should be good at data structures, algorithms 
+•  Good communication skills 
+•  Knowledge in reactjs, springboot, AI&ML is a plus 
+
+ 
+
+Qualification: 
+
+•  BE/B. Tech in CSE and IT 
+•  Minimum 80% marks throughout i.e., 10,12 and Graduation till date.  
+•  No active backlogs 
+ 
+
+ 

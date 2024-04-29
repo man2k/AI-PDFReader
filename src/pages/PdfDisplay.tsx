@@ -15,11 +15,13 @@ const PdfDisplay = () => {
       <div className="text-white">
         <iframe
           src={pdfFilePath}
-          className="w-screen h-[560px] border-2 border-amber-500"
+          className="w-screen h-screen border-2 border-amber-500"
           id="pdfViewer"
         />
       </div>
-      <ReadPdf />
+      <div className="absolute bottom-2">
+        <ReadPdf />
+      </div>
     </main>
   );
 };

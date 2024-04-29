@@ -4,13 +4,13 @@
 
 mod commands;
 use commands::loadpdf::loadpdf;
-use commands::readpdf::readpdf;
-use commands::audiocontrol::texttospeech;
+use commands::readpdf::{readpdf, pausepdf};
+// use commands::audiocontrol::texttospeech;
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![loadpdf,readpdf, texttospeech])
+        .invoke_handler(tauri::generate_handler![loadpdf,readpdf,pausepdf])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

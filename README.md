@@ -3,22 +3,28 @@
 ### Test and Build commands
 
 #### BUILD (To build installer):
+
 ```
 pnpm i && pnpm tauri build
 ```
+
 OR
+
 ```
-npm i && npm tauri build
+npm i && npm run tauri build
 ```
+
 #### TESTING (To build a test case):
+
 ```
 pnpm i && pnpm tauri dev
 ```
-OR
-```
-npm i && npm tauri dev
-```
 
+OR
+
+```
+npm i && npm run tauri dev
+```
 
 **you will need cargo and rust installed for this software to run**
 
